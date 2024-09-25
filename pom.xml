@@ -21,7 +21,7 @@
 	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<url>https://github.com/zhongqiao/shared-lib-poc</url>
+			<url>https://maven.pkg.github.com/zhongqiao/shared-lib-poc</url>
 		</repository>
 	</distributionManagement>
 
