@@ -24,7 +24,12 @@ jobs:
       - name: Grant execute permission for Maven Wrapper
         run: chmod +x ./mvnw
         
-      - name: Publish package
-        run: ./mvnw deploy
+      - name: Replace Maven Credentials
+        run: |
+          sed -i 's/USERNAME/${{ secrets.USERNAME }}/g' .github/settings.xml
+          sed -i 's/PASSWORD/${{ secrets.PASSWORD }}/g' .github/settings.xml
+
+      - name: Install
+        run: ./mvnw clean install -s .github/settings.xml
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.github.token }}
