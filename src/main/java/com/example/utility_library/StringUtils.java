@@ -2,7 +2,6 @@ package com.example.utility_library;
 
 public class StringUtils {
 
-    //sample code
     public static String capitalize(String input) {
         if (input == null || input.isEmpty()) {
             return input;
