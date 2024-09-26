@@ -31,5 +31,3 @@ jobs:
 
       - name: Publish package 
         run: ./mvnw deploy -s .github/settings.xml
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
